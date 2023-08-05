@@ -2,13 +2,24 @@ import React from "react";
 import "./App.css";
 
 const App = () => {
-   const postData = (e) => {
-      console.log("data posted");
-   };
    async function logMovies() {
       const response = await fetch("https://swapi.dev/api/people/1/");
       const movies = await response.json();
       console.log(movies);
+   }
+
+   function fetchData() {
+      fetch("https://witty-cow-train.cyclic.app/cookies", {
+         method: "POST",
+         headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+         },
+         credentials: "include",
+      })
+         .then((res) => res.json())
+         .then((res) => console.log(res))
+         .catch((error) => console.error("Error:", error));
    }
 
    return (
@@ -17,7 +28,7 @@ const App = () => {
             <h1>Post Data</h1>
             <button onClick={() => postData}>Click it</button>
             <button onClick={logMovies}>Click Movies</button>
-            <button onClick={() => logMovies}>Click Movies Callback</button>
+            <button onClick={fetchData}>GET COOKIE</button>
          </div>
       </div>
    );
