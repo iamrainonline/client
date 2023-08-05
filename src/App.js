@@ -12,6 +12,7 @@ const App = () => {
       fetch("https://witty-cow-train.cyclic.app/cookie", {
          // Use the correct URL
          method: "POST",
+         mode: "no-cors",
          headers: {
             Accept: "application/json, text/plain, */*",
             "Content-Type": "application/json",
