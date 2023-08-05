@@ -9,7 +9,7 @@ const App = () => {
    }
 
    function fetchData() {
-      fetch("https://tense-bass-capris.cyclic.app/cookie", {
+      fetch("https://witty-cow-train.cyclic.app/cookie", {
          // Use the correct URL
          method: "POST",
          headers: {
