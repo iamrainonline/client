@@ -9,7 +9,8 @@ const App = () => {
    }
 
    function fetchData() {
-      fetch("https://witty-cow-train.cyclic.app/cookies", {
+      fetch("https://tense-bass-capris.cyclic.app/cookie", {
+         // Use the correct URL
          method: "POST",
          headers: {
             Accept: "application/json, text/plain, */*",
@@ -21,7 +22,6 @@ const App = () => {
          .then((res) => console.log(res))
          .catch((error) => console.error("Error:", error));
    }
-
    return (
       <div>
          <div>
